@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Mvc;
 using World.Models;
-using System;
+
 
 namespace World.Controllers
 {
@@ -12,8 +12,8 @@ namespace World.Controllers
     [HttpGet("/countries")]
     public ActionResult Index()
     {
-      // List<Category> allCategories = Category.GetAll();
-      // return View(allCategories);
+      List<Country> allCountries = Country.GetAll();
+      return View(allCountries);
     }
 
   }
