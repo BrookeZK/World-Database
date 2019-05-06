@@ -3,13 +3,20 @@
 }
 
 <h1>Countries</h1>
+<p><a href='/'>Back home</a></p>
+
+<form action="/countries/asc" method="post">
+  <button type="submit">Order By Population - Ascending</button>
+</form>
+<form action="/countries/desc" method="post">
+  <button type="submit">Order By Population - Descending</button>
+</form>
 
 @foreach (var country in Model)
 {
   <h3><a href='/countries/@country.Code'>@country.Name</a></h3>
   <h3>Continent: @country.Continent</h3>
   <h3>Population: @country.Population</h3>
+  <h3>LifeExpectancy: @country.LifeExpectancy</h3>
   <p>---------------</p>
 }
-
-<p><a href='/'>Back home</a></p>

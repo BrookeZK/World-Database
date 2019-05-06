@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+<h3>Here are all the cities in @Model["country"]:</h3>
+
+
+
+@foreach (var city in @Model["cities"])
+{
+  <h3>@city.Name</h3>
+  <h3>Region: @city.District</h3>
+  <h3>Population: @city.Population</h3>
+  <p>---------------</p>
+}
+
+<p><a href='/countries'>Return to list of countries</a></p>
+<p><a href='/'>Back home</a></p>
+
+
+@* /* <li><a href='/categories/@Model.GetId()/items/@item.GetId()'>@item.GetDescription()</a></li> */ *@
+
+@* <ol>
+@foreach (var item in @Model["items"])
+{
+<li><a href='/categories/@Model["category"].GetId()/items/@item.GetId()'>@item.GetDescription()</a></li>
+}
+</ol> *@
